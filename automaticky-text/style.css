@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(68, 78, 78);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div {
+    position: absolute;
+    bottom: 30px;
+    background: rgb(171, 88, 219);
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
+input {
+    width: 60px;
+    padding: 5px;
+    font-size: 18px;
+    background-color: rgb(198, 165, 218);
+    border: none;
+    text-align: center;
+}
+
+label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+}

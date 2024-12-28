@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(206, 26, 191);
+    overflow: hidden;
+}
+
+.img1 {
+    background-image: url(img/cesta.jpg);
+}
+
+.img2 {
+    background-image: url(img/dum.jpg);
+}
+
+.img3 {
+    background-image: url(img/krajna.jpg);
+}
+
+.img4 {
+    background-image: url(img/voda.jpg);
+}
+
+.img5 {
+    background-image: url(img/zvire.jpeg);
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.slide h2 {
+    font-size: 25px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.slide.active {
+    flex: 4;
+}
+
+.slide.active h2 {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100vw;
+    }
+
+    .slide:nth-of-type(4), .slide:nth-of-type(5) {
+        display: none;
+    }
+}

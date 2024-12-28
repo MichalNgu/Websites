@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: #cf7474;
+}
+
+.container1, .container2, .container3 {
+    display: flex;
+    width: 60%;
+    height: 450px;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    padding: 20px;
+    background: #d34545;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+header {
+    background: #751414;
+    color: #ccb1b1;
+    padding: 20px 0;
+    position: relative;
+}
+
+h1 a {
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+
+h1 a:hover {
+    color: #ac7f7f;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: yellow;
+    text-decoration: none; 
+    transition: all 0.3s ease; 
+}
+
+
+nav ul li.icons {
+    margin-left: auto;
+}
+
+nav ul li.icons a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+nav ul li.icons a:hover {
+    color: #ccb1b1;
+}
+.container1, .container2, .container3 {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none;
+}
+
+.container1.active, .container2.active, .container3.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #0073e6;
+}
+
+button {
+    width: 10px;
+    height: 30px;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background: transparent;
+}
+
+
+
+button img {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding-bottom: 8px;
+}
+
+
+@media (max-width: 600px) {
+    .container1, .container2, .container3 {
+      width: 100%;
+      height: auto;
+      margin: 20px auto;
+    }
+    .navigation {
+      flex-direction: column;
+    }
+    .dots {
+      flex-direction: column;
+    }
+    button {
+      width: 100%;
+    }
+  }
