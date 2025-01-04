@@ -12,7 +12,7 @@ Tento repozitář obsahuje osobní portfolio projektů, které demonstrují růz
 - **search**: Vyhledávací nástroj pro prohledávání dat.
 - **seznam-users**: Seznam uživatelů s možností filtrování.
 - **toDoList**: Aplikace pro správu úkolů.
-- **web o mne**: Osobní webová stránka s informacemi o autorovi.
+- **osobníWeb**: Osobní webová stránka s informacemi o autorovi.
 - **čas**: Aplikace zobrazující aktuální čas.
 
 ## Požadavky
