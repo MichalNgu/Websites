@@ -19,7 +19,8 @@
             <li class="link"><a href="#">Domov</a></li>
             <li id="link1" class="link"><a href="#">Dovednosti</a></li>
             <li id="link2" class="link"><a href="#">projekty</a></li>
-            <li id="link3" class="link"><a href="#">about</a></li>
+            <li id="link3" class="link"><a href="#">kontaktuj mě</a></li>
+            <li id="link4" class="link"><a href="#">about</a></li>
         </ul>
     </nav>
 
@@ -32,12 +33,17 @@
             <div class="text">
                 <h3 class="prg">Jsem <span class="auto-type">Programátor</span></h3>
             </div>
-            <h1 class="title" data-speed="-2">Michal Nguyen</h1>
-            <p class="description">Vítej na mým webu. Jmenuji se Michal, učím se programování.</p>
+            <h1 class="title">Michal Nguyen</h1>
+            <p class="description">Vítej na mým webu. Jmenuji se Michal, učím se programování 🚀. učím se hlavně <span class="span-text">Javascript</span> <span class="span-text">Css</span> a <span class="span-text">HTML</span>.</p>
         </div>
-        <div class="image">
-            <img src="img/prg.jpg" alt="">
-        </div>
+        <model-viewer
+        class="image" 
+        src="img/3d_computer__-_sketchfab_weekly_-_11_mar23.glb" 
+        alt="3D model" 
+        auto-rotate 
+        camera-controls 
+        style="width: 100%; height: 30vh;">
+    </model-viewer>
     </header>
 
     <!-- Dovednosti -->
@@ -138,6 +144,29 @@
         </div>
     </section>
 
+
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2 class="header">Kontakt</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="20169d36-cc94-4095-bb59-db4309f80785">
+            <input type="text" name="name" placeholder="tvoje Jméno" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Tvůj email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Zpráva" class="contact-inputs required"></textarea>
+            <button type="submit" alt="">odeslat</button>
+        </form>
+
+        <div class="contact-right">
+            <img src="img/right_img.png" alt="">
+        </div>
+    </div>
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
     <!-- about -->
 
     <footer class="container">
@@ -162,7 +191,7 @@
     </div>
 
     <script src="script.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </html>

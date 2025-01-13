@@ -1,14 +1,3 @@
-document.addEventListener("mousemove", parallax);
-
-function parallax(e) {
-    document.querySelectorAll(".title").forEach(layer => {
-        const speed = layer.getAttribute("data-speed");
-        const x = (window.innerWidth / 2 - e.pageX) * speed / 150;
-        const y = (window.innerHeight / 2 - e.pageY) * speed / 150;
-        layer.style.transform = `translate(${x}px, ${y}px)`;
-    });
-}
-
 const typed = new Typed('.auto-type', {
     strings: ['Web Designer', 'Web Developer'],
     typeSpeed: 100,
@@ -20,13 +9,14 @@ const typed = new Typed('.auto-type', {
 function scrollToElement(elementSelector, instance = 0) {
     const element = document.querySelectorAll(elementSelector);
     if (element.length > instance) {
-        element[instance].scrollIntoView({ behavior: 'smooth', block: "start" });
+        element[instance].scrollIntoView({ behavior: 'smooth',});
     }
 }
 
 const link1 = document.getElementById("link1");
 const link2 = document.getElementById("link2");
 const link3 = document.getElementById("link3");
+const link4 = document.getElementById("link4");
 
 link1.addEventListener("click", (event) => {
     event.preventDefault(); 
@@ -40,7 +30,27 @@ link2.addEventListener("click", (event) => {
 
 link3.addEventListener("click", (event) => {
     event.preventDefault();
-    scrollToElement(".colum"); 
+    scrollToElement(".contact-container"); 
 });
 
-//console.log(`Scrolling to: ${elementSelector}, instance: ${instance}`);
+link4.addEventListener("click", (event) => {
+    event.preventDefault();
+    scrollToElement(".colum"); 
+});
+//console.log(`Scrolling to: ${elementSelector}, instance: ${instance}`)
+
+const scrollUp = document.getElementById("scroll-up");
+
+window.onscroll = () => {
+    if (window.scrollY > 1100) {
+        scrollUp.style.display = "block";
+    } else {
+        scrollUp.style.display = "none";
+    }
+}
+scrollUp.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "auto",
+    });
+});	

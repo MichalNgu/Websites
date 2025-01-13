@@ -154,6 +154,17 @@ section .header {
     line-height: 3rem;
 }
 
+.content p {
+    font-size: 24px;
+}
+
+.span-text {
+    background: linear-gradient(135deg, #cf2424, #4e085f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
 .skills {
     margin-top: 4rem;
     display: grid;
@@ -195,6 +206,8 @@ section .header {
     color: #dbc2c2;
     margin-bottom: 1rem;
 }
+
+/*  projekty */
  
 .sub-header {
     max-width: 600px;
@@ -260,6 +273,112 @@ section .header {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
+
+.section_title {
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h2 {
+    font-weight: 600;
+    color: #ac2222;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #ac2222;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.contact-left textarea {
+    width: 400px;
+    height: 150px;
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.contact-inputs:focus {
+    border: 2px solid #920f0f;
+}
+
+.contact-inputs::placeholder {
+    color: #000;
+}
+
+.contact-left button {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-left button:hover {
+    background: linear-gradient(135deg, #4e085f, #153677);
+}
+
+
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: 5rem;
+    background-color: hsla(0, 0%, 98%, .1);
+    display: inline-flex;
+    padding: 6px;
+    color: #fff;
+    font-size: 1.25rem;
+    z-index: 10;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: bottom .4s transform;
+}
+
+.scrollup:hover {
+    transform: translateY(-.25rem);
+}
+
+/*  Footer  */
 
 footer {
     position: relative;
@@ -329,6 +448,14 @@ footer .colum .social a:hover {
 
     .projects {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-inputs {
+        width: 80vw;
+    }
+
+    .contact-right {
+        display: none;
     }
 }
 
