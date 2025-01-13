@@ -132,19 +132,6 @@ header .image img {
     color: #fff724;
 }
 
-/*.btn {
-    padding: 1rem 2rem;
-    background-color: #ac2222;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #da3838;
-}*/
-
 section .header {
     text-align: center;
     margin-bottom: 1rem;
@@ -159,10 +146,53 @@ section .header {
 }
 
 .span-text {
-    background: linear-gradient(135deg, #cf2424, #4e085f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
     font-weight: 600;
+    background-image: linear-gradient(
+        90deg,
+        #ff00aa,
+        #00fff2,
+        #f700ff,
+        #ffee00
+    );
+    background-size: 400%;
+    background-clip: text;
+    color: transparent;
+    animation: gardientMove 10s linear infinite;
+    position: relative;
+}
+
+.span-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        #ff00aa,
+        #00fff2,
+        #f700ff,
+        #ffee00
+    );
+    background-size: 400%;
+    background-clip: text;
+    color: transparent;
+    filter: blur(15px);
+    animation: gardientMove 10s linear infinite;
+}
+
+@keyframes gardientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .skills {
@@ -342,23 +372,59 @@ section .header {
     color: #000;
 }
 
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .contact-left button {
     width: 200px;
     height: 50px;
-    background: linear-gradient(135deg, #153677, #4e085f);
+    background-color: rgba(255, 255, 255, 0.2);
     color: #fff;
     border: none;
     border-radius: 50px;
     font-size: 18px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    position: relative;
 }
 
-.contact-left button:hover {
-    background: linear-gradient(135deg, #4e085f, #153677);
+.contact-left button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(
+        from var(--angle),
+        #ff0039,
+        #ffd900,
+        #3300ff,
+        #00ffff,
+        #00ff20,
+        #d200ff,
+        #ff0039
+    );
+    border-radius: inherit;
+    z-index: -1;
+    filter: blur(10px);
+    transition: filter 1s ease;
+    animation: rotate 5s infinite linear;
 }
 
+.contact-left button:hover::before {
+    filter: blur(20px);
+}
 
+@keyframes rotate {
+    0% {
+        --angle: 0deg;
+    }
+
+    100% {
+        --angle: 360deg;
+    }
+}
+    
 .scrollup {
     position: fixed;
     right: 1rem;
