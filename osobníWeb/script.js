@@ -51,6 +51,6 @@ window.onscroll = () => {
 scrollUp.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
-        behavior: "auto",
+        behavior: "smooth",
     });
 });	

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Počasí</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/72668ae955.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="text" class="input" placeholder="zadej město">
+            <button><i class="fa-sharp fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+        </div>
+        <div class="weather-loading">
+            <h2 class="city">Počasí v Česku</h2>
+            <h1 class="temp">41C</h1>
+            <div class="flex">
+                <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon">
+                <div class="description">slunečno</div>
+            </div>
+            <div class="humidity">Vlhkost: 60%</div>
+            <div class="wind">vítr: 6km/h</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>    
+</body>
+</html>
