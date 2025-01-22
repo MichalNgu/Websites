@@ -1,6 +1,6 @@
-# Portfolio
+# Websites
 
-Tento repozitář obsahuje osobní portfolio projektů, které demonstrují různé webové aplikace a nástroje vytvořené pomocí HTML, CSS a JavaScriptu.
+Tento repozitář obsahuje osobní webový projekty, které demonstrují různé webové aplikace a nástroje vytvořené pomocí HTML, CSS a JavaScriptu.
 
 ## Struktura projektu
 
