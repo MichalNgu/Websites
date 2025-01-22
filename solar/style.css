@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+.star {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+    animation: twinkle 2s infinite ease-in-out;
+    clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+    );
+}
+
+
+.star:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+    top: 30%;
+    left: 70%;
+    animation-delay: 0.5s;
+}
+
+.star:nth-child(3) {
+    top: 80%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.star:nth-child(4) {
+    top: 80%;
+    left: 80%;
+    animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.3; transform: scale(0.8); }
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 0, 1) 30%, rgba(255, 140, 0, 1) 60%, rgba(255, 69, 0, 1) 90%);
+    box-shadow: 0 0 50px 20px rgba(255, 200, 0, 0.8);
+    animation: rotate 10s infinite linear;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.planet1 {
+    opacity: 0.8;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 50;
+    width: 40px;
+    height: 40px;
+    margin: 230px;
+    background: linear-gradient(135deg, rgb(200, 142, 142) 25%, transparent 100%);
+}
+
+.planet2 {
+    opacity: 0.8;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: 320px;
+    background: linear-gradient(200deg, rgb(185, 19, 19) 25%, transparent 100%);
+}
+
+.planet3 {
+    opacity: 0.8;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    margin: 300px;
+    animation: rotate 5s infinite linear;
+    background: linear-gradient(300deg, rgb(22, 51, 216) 25%, transparent 100%);
+}
+
+.planet4 {
+    opacity: 0.8;
+    position: absolute;
+    background-color: gray;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    margin: 70px;
+    animation: rotate 5s infinite linear;
+}
