@@ -14,10 +14,18 @@ Tento repozitář obsahuje osobní webový projekty, které demonstrují různé
 - **toDoList**: Aplikace pro správu úkolů.
 - **osobníWeb**: Osobní webová stránka s informacemi o autorovi.
 - **čas**: Aplikace zobrazující aktuální čas.
+- **osobníWeb**: Osobní webová stránka s informacemi o autorovi.
+- **osobníWeb**: Osobní webová stránka s informacemi o autorovi.
 
 ## Požadavky
 
 - Webový prohlížeč (např. Chrome, Firefox, Safari)
+
+## Kontakt
+
+- [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/vasprofil)
+- [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vasemail@domena.cz)
+
 
 ## Instalace
 
